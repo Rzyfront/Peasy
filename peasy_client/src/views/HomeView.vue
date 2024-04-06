@@ -1,5 +1,5 @@
 <script setup>
-//Untils
+//Utils
 import { RouterLink } from 'vue-router'
 
 //Images
@@ -25,7 +25,7 @@ import { SPANISH_HOMEVIEW } from '@/assets/Languages/HomeView'
 
         <div class="flex flex-col gap-5">
           <RouterLink
-            to="/Login"
+            to="/login"
             class="btn-primary flex justify-center items-center w-[300px] h-[50px]"
           >
             {{ SPANISH_HOMEVIEW.ButtoText }}

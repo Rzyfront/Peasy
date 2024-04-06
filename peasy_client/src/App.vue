@@ -1,15 +1,19 @@
 <script setup>
-//Untils
-import { RouterView } from 'vue-router'
-import { useRoute } from 'vue-router'
-
-//Components
+// Utils
+import { ref, watch } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
+// Components
 import NavbarComponent from './components/AppComponents/NavbarComponent.vue'
 
-//Scripts
+// Scripts
 const route = useRoute()
+const showNavbar = ref(true)
 const hideNavbarRoutes = ['/login', '/register']
-const showNavbar = !hideNavbarRoutes.includes(route.path)
+
+watch(() => {
+  //Si incluye las rutas devuelve true pero como queremos que sea hide si las encuentra lo cambiamos
+  showNavbar.value = !hideNavbarRoutes.includes(route.path)
+})
 </script>
 
 <template>
