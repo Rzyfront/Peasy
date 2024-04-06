@@ -1,13 +1,7 @@
-<script setup>
- 
-</script>
- 
- 
+<script setup></script>
+
 <template>
-  <div>NewClearTemplate</div>
+  <div class="w-[100%] h-[100vh] flex justify-center items-center"></div>
 </template>
- 
- 
-<style scoped>
- 
-</style>
+
+<style scoped></style>
