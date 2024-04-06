@@ -25,7 +25,7 @@ import { SPANISH_HOMEVIEW } from '@/assets/Languages/HomeView'
 
         <div class="flex flex-col gap-5">
           <RouterLink
-            to="/login"
+            to="/register"
             class="btn-primary flex justify-center items-center w-[300px] h-[50px]"
           >
             {{ SPANISH_HOMEVIEW.ButtoText }}
