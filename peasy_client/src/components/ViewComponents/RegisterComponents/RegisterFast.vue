@@ -5,27 +5,12 @@ import CardComponent from '@/components/AppComponents/CardComponent.vue'
 
 <template>
   <div class="w-[100%] h-[100vh] flex justify-center items-center">
-    <CardComponent>
+    <CardComponent :CustomClass="'flex flex-col gap-3'">
       <div class="w-100 h-20 flex justify-center items-center">
-        <h3 class="text-4xl font-bold">Registarse</h3>
+        <h3 class="text-4xl font-bold drop-shadow-lg">Registarse</h3>
       </div>
-      <div class="w-100 h-80 flex flex-col justify-center items-center">
-        <label class="input input-bordered flex items-center gap-2">
-          <input type="text" class="grow" placeholder="Search" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            class="w-4 h-4 opacity-70"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </label>
-        <label class="input input-bordered flex items-center gap-2">
+      <div class="w-100 h-80 flex flex-col justify-start items-center gap-2">
+        <label class="input input-bordered flex items-center gap-2 w-80 bg-color1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -41,7 +26,8 @@ import CardComponent from '@/components/AppComponents/CardComponent.vue'
           </svg>
           <input type="text" class="grow" placeholder="Email" />
         </label>
-        <label class="input input-bordered flex items-center gap-2">
+
+        <label class="input input-bordered flex items-center gap-2 w-80 bg-color1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -54,7 +40,8 @@ import CardComponent from '@/components/AppComponents/CardComponent.vue'
           </svg>
           <input type="text" class="grow" placeholder="Username" />
         </label>
-        <label class="input input-bordered flex items-center gap-2">
+
+        <label class="input input-bordered flex items-center gap-2 w-80 bg-color1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -69,6 +56,31 @@ import CardComponent from '@/components/AppComponents/CardComponent.vue'
           </svg>
           <input type="password" class="grow" value="password" />
         </label>
+        <label class="input input-bordered flex items-center gap-2 w-80 bg-color1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-4 h-4 opacity-70"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <input type="password" class="grow" value="password" />
+        </label>
+
+        <button
+          class="btn w-80 outline-none border-none bg-color2 hover:bg-color3 hover:text-color2"
+        >
+          Registrarse
+        </button>
+        <small class="w-80 text-center"
+          >Puedes hacer un resgistro completo para que tu perfil quede configurado
+          <span class="font-bold hover:text-color3 cursor-pointer">click aqui para ir</span></small
+        >
       </div>
     </CardComponent>
   </div>
