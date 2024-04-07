@@ -16,7 +16,7 @@ const props = defineProps({
     default: ''
   },
   ColorMode: {
-    type: String,
+    type: Number,
     default: COLOR_MODE.Light
   }
 })
