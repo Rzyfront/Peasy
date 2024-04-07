@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div>NewClearTemplate</div>
+  <div>complete</div>
 </template>
 
 <style scoped></style>

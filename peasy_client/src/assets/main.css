@@ -3,35 +3,42 @@
 @tailwind utilities;
 /* @import './base.css'; */
 
-:root{
+:root {
+  --color-1: White;
+  --color-2: #1e232c;
+  --color-3: #35c2c1;
+  --color-3-hover: #2ca3a3;
+  --color-4: #6a707c;
+  --color-5: #8391a1;
+  --color-6: #e8ecf4;
 
-  --color-1 : White;
-  --color-2 : #1E232C;
-  --color-3 : #35C2C1;
-  --color-3-hover : #2ca3a3;
-  --color-4 : #6A707C;
-  --color-5 : #8391A1;
-  --color-6 : #E8ECF4;
-
-  --bg-gr-color : radial-gradient(circle at 97% 3%, rgba(53, 194, 193, 0.5) 0%, rgba(255, 255, 255, 1) 50%, rgba(53, 194, 193, 0.32) 100%);
-
+  --bg-gr-color: radial-gradient(
+    circle at 97% 3%,
+    rgba(53, 194, 193, 0.5) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(53, 194, 193, 0.32) 100%
+  );
 }
 
-
-*{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: var(--color-2);
 }
 
-body{
-width: 100%;
-height: 100vh;
-background-size: 100% 100%;
-background-position: 0px 0px,0px 0px,0px 0px;
-background-image: radial-gradient(80% 75% at 110% 18%, #00FFFF4F 1%, #FFFFFF00 81%),radial-gradient(80% 75% at -7% 85%, #00FFFF47 1%, #FFFFFF00 66%),linear-gradient(90deg, #FFFFFFFF 0%, #FFFFFFFF 100%);
+body {
+  width: 100%;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-position:
+    0px 0px,
+    0px 0px,
+    0px 0px;
+  background-image: radial-gradient(80% 75% at 110% 18%, #00ffff4f 1%, #ffffff00 81%),
+    radial-gradient(80% 75% at -7% 85%, #00ffff47 1%, #ffffff00 66%),
+    linear-gradient(90deg, #ffffffff 0%, #ffffffff 100%);
 }
 
 @layer components {
@@ -45,4 +52,3 @@ background-image: radial-gradient(80% 75% at 110% 18%, #00FFFF4F 1%, #FFFFFF00 8
     @apply inline-block rounded-2xl border-2 border-neutral-50 px-6 py-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 motion-reduce:transition-none dark:hover:bg-color2 dark:focus:bg-color2;
   }
 }
-
