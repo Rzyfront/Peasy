@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_hotel', function (Blueprint $table) {
+        Schema::create('user_hotels', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');  //  'usuarios_id'
             $table->unsignedBigInteger('hotel_id'); //  'hotel_id'
             $table->string('role', 255);            //  'rol'
         
             // Foreign Keys
-            $table->foreign('user_id')->references('id')->on('user');  //  'usuarios'
-            $table->foreign('hotel_id')->references('id')->on('hotel'); //  'hoteles'
+            $table->foreign('user_id')->references('id')->on('users');  //  'usuarios'
+            $table->foreign('hotel_id')->references('id')->on('hotels'); //  'hoteles'
         });
     }
 

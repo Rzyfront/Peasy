@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('payment', function (Blueprint $table) {
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('reservation_id');  //  'reserva_id'
             $table->decimal('amount', 8, 2);          //  'importe' 
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();
         
             // Foreign Key
-            $table->foreign('reservation_id')->references('id')->on('reservation');  //  'reserva' 
+            $table->foreign('reservation_id')->references('id')->on('reservations');  //  'reserva' 
         });
     }
 

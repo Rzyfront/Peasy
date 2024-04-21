@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('room', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('hotel_id');
             $table->string('status', 255);  // 'estado'
@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('bathroom_type', 255);// 'baño tipo'
             $table->timestamps();
         
-            $table->foreign('hotel_id')->references('id')->on('hotel');
+            $table->foreign('hotel_id')->references('id')->on('hotels');
         });
         
         

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     { 
-        Schema::create('user_subscription', function (Blueprint $table) {
+        Schema::create('users_subscriptions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');  // 'usuario_id'
             $table->unsignedBigInteger('subscription_id');  // 'suscripcion_id'
@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('status', 255);  // 'estado' (e.g., "active", "canceled", "pending")
         
             // Foreign Keys
-            $table->foreign('user_id')->references('id')->on('user');  //  'usuario' 
-            $table->foreign('subscription_id')->references('id')->on('subscription');  //  'suscripcion' 
+            $table->foreign('user_id')->references('id')->on('users');  //  'usuario' 
+            $table->foreign('subscription_id')->references('id')->on('subscriptions');  //  'suscripcion' 
         });
     }
 

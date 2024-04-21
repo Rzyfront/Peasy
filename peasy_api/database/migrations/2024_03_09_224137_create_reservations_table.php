@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reservation', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('client_id');  //  'cliente_id'
             $table->unsignedBigInteger('hotel_id'); //  'hotel_id'
@@ -25,9 +25,9 @@ return new class extends Migration
             $table->string('additional_client_info', 255)->nullable();  //  'info de cliente'
             $table->timestamps();
         
-            $table->foreign('client_id')->references('id')->on('client');  //  'cliente'
-            $table->foreign('hotel_id')->references('id')->on('hotel'); //  'hotel'
-            $table->foreign('room_id')->references('id')->on('room');  //  'habitacion'
+            $table->foreign('client_id')->references('id')->on('clients');  //  'cliente'
+            $table->foreign('hotel_id')->references('id')->on('hotels'); //  'hotel'
+            $table->foreign('room_id')->references('id')->on('rooms');  //  'habitacion'
         });
         
     }

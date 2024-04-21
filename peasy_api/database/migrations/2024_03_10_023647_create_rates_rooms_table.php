@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('rate_room', function (Blueprint $table) {
+        Schema::create('rates_rooms', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('rate_id');  //  'tarifa_id'
             $table->unsignedBigInteger('room_id');  //  'habitacion_id'
             $table->timestamps();
         
             // Foreign Keys
-            $table->foreign('rate_id')->references('id')->on('rate');  //  'tarifa'
-            $table->foreign('room_id')->references('id')->on('room');  //  'habitacion'
+            $table->foreign('rate_id')->references('id')->on('rates');  //  'tarifa'
+            $table->foreign('room_id')->references('id')->on('rooms');  //  'habitacion'
         });
         
     }
