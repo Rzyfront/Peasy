@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
   <div
-    class="w-[500px] h-[500px] rounded-xl bg-color1 shadow-2xl border-color2 hover:shadow-4xl"
+    class="w-[500px] h-[550px] rounded-xl bg-color1 shadow-2xl border-color2 hover:shadow-4xl"
     :class="props.CustomClass"
   >
     <slot />

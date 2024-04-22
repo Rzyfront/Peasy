@@ -54,8 +54,8 @@ const onRegister = () => {
 
 <template>
   <div class="w-[100%] h-[100vh] flex justify-center items-center">
-    <CardComponent :CustomClass="'flex flex-col gap-3 relative'">
-      <div class="h-20 absolute flex justify-center items-center">
+    <CardComponent :CustomClass="'flex flex-col gap-5 relative'">
+      <div class="h-[20%] absolute flex justify-center items-center">
         <div
           @click="router.replace('/')"
           class="flex justify-center items-center gap-2 p-5 hover:drop-shadow-lg duration-100 group"
@@ -64,10 +64,10 @@ const onRegister = () => {
           <p class="font-semibold duration-100">Volver</p>
         </div>
       </div>
-      <div class="w-100 h-20 flex justify-center items-center">
+      <div class="w-100 h-[20%] flex justify-center items-center">
         <h3 class="text-4xl font-bold drop-shadow-lg">Registarse</h3>
       </div>
-      <div class="w-100 h-90 flex flex-col justify-start items-center gap-2">
+      <div class="w-100 h-[80%] flex flex-col justify-start items-center gap-2">
         <div
           class="tooltip tooltip-accent tooltip-right"
           :class="error_tooltips.email ? 'tooltip-open tooltip-error' : ''"

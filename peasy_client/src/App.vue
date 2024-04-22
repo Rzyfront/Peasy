@@ -8,7 +8,7 @@ import NavbarComponent from './components/AppComponents/NavbarComponent.vue'
 // Scripts
 const route = useRoute()
 const showNavbar = ref(true)
-const hideNavbarRoutes = ['/login', '/register']
+const hideNavbarRoutes = ['/login', '/register', '/Login', '/Register']
 
 watchEffect(() => {
   //Si incluye las rutas devuelve true pero como queremos que sea hide si las encuentra lo cambiamos

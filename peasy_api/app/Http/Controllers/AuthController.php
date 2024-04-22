@@ -7,6 +7,8 @@ use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
+
 
 class AuthController extends Controller
 {
@@ -54,4 +56,37 @@ class AuthController extends Controller
         auth()->user()->tokens()->delete();
         return response()->json(['message'=> 'Session has been finished']);
     }
+
+    public function checkAccess(Request $request){
+    try {
+        // Obtener el token de la solicitud
+        $token = $request->bearerToken();
+
+        if (!$token) {
+            // Token no proporcionado en el encabezado de autorización
+            throw ValidationException::withMessages([
+                'message' => ['Token not provided'],
+            ]);
+        }
+
+        // Verificar el token
+        $user = Auth::guard('sanctum')->user();
+
+        if ($user) {
+            // Token válido, devolver datos del usuario
+            return response()->json([
+                'message' => 'Access granted',
+                'user' => $user
+            ], 200);
+        } else {
+            // Token inválido
+            throw ValidationException::withMessages([
+                'message' => ['Invalid token'],
+            ]);
+        }
+    } catch (ValidationException $e) {
+        return response()->json( $e->errors() , 401);
+    }
+}
+    
 }
