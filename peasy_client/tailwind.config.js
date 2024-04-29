@@ -10,7 +10,7 @@ export default {
         color3hover: '#0085c0',
         color4: '#6A707C',
         color5: '#8391A1',
-        color6: '#E8ECF4',
+        color6: '#f5f8ff',
         color_danger: '#EE2222'
       }
     }
