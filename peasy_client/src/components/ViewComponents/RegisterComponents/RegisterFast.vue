@@ -54,7 +54,9 @@ const onRegister = () => {
 
 <template>
   <div class="w-[100%] h-[100vh] flex justify-center items-center">
-    <CardComponent :CustomClass="'flex flex-col gap-5 relative'">
+    <CardComponent
+      :CustomClass="'flex flex-col gap-5 relative w-[500px] h-[550px] shadow-2xl hover:shadow-4xl'"
+    >
       <div class="h-[20%] absolute flex justify-center items-center">
         <div
           @click="router.replace('/')"

@@ -44,12 +44,12 @@ import PeasyLogoHorizontal from '@/assets/images/peasyhorizontallogonobg.png'
 
       <div class="flex gap-10 items-center">
         <RouterLink
-          to="/"
+          to="/login"
           class="font-medium text-neutral-50 border-b-2 border-transparent hover:border-neutral-50 transition duration-150 ease-in-out"
         >
           Login
         </RouterLink>
-        <RouterLink to="/" class="btn-bordered-light"> Register </RouterLink>
+        <RouterLink to="/register" class="btn-bordered-light"> Register </RouterLink>
       </div>
     </div>
   </nav>

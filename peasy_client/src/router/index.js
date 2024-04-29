@@ -31,12 +31,60 @@ const router = createRouter({
       name: 'dashboard',
       component: () => import('../views/DashboardView.vue'),
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/booking',
+      name: 'booking',
+      component: () => import('../views/BookingView.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/pos',
+      name: 'pos',
+      component: () => import('../views/PosView.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/expenses',
+      name: 'expenses',
+      component: () => import('../views/ExpensesView.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/task',
+      name: 'task',
+      component: () => import('../views/TaskView.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/reports',
+      name: 'reports',
+      component: () => import('../views/ReportsView.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: () => import('../views/HelpView.vue'),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: () => import('../views/SettingsView.vue'),
+      meta: { requiresAuth: true }
     }
   ]
 })
 
 router.beforeEach(async (to, from, next) => {
   const authStore = useAuthStore()
+
+  if (to.path === '/home') {
+    next('/')
+    return
+  }
+
   // Verificar si la ruta requiere autenticación
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     // Verificar el acceso

@@ -11,6 +11,7 @@
   --color-4: #6a707c;
   --color-5: #8391a1;
   --color-6: #e8ecf4;
+  --color-danger: #ee2222;
 
   --bg-gr-color: radial-gradient(
     circle at 97% 3%,
@@ -50,5 +51,17 @@ body {
 @layer components {
   .btn-bordered-light {
     @apply inline-block rounded-2xl border-2 border-neutral-50 px-6 py-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 motion-reduce:transition-none dark:hover:bg-color2 dark:focus:bg-color2;
+  }
+  .shadow-section {
+    box-shadow:
+      rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+
+  .hover-item {
+    box-shadow: #35c2c267 0px -50px 36px -28px inset;
+  }
+  .hover-danger {
+    box-shadow: #ee22225f 0px -50px 36px -28px inset;
   }
 }

@@ -85,6 +85,7 @@ export const useAuthStore = defineStore('auth', {
       // Elimina el token de acceso del almacenamiento seguro
       localStorage.removeItem('accessToken')
 
+      router.replace('/login')
       // Restablece el estado de autenticación y los datos del usuario
       this.isAuthenticated = false
       this.user = null

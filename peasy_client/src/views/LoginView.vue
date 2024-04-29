@@ -3,9 +3,12 @@ import { ref } from 'vue'
 import { useAuthStore } from '/src/stores/auth'
 //Components
 import CardComponent from '@/components/AppComponents/CardComponent.vue'
+import AllRightsReservedComponent from '@/components/AppComponents/AllRightsReservedComponent.vue'
+
 import router from '@/router'
 
 //Options
+import { COLOR_MODE } from '@/options/AppOptions'
 import { PASSWORD_FIELD_TYPE } from '@/options/RegisterOptions'
 
 const useStore = useAuthStore()
@@ -49,7 +52,9 @@ const onLogin = () => {
 <template>
   <div class="w-[100%] h-[100vh] flex justify-center items-center relative">
     <div class="w-[100%] h-[100vh] flex justify-center items-center">
-      <CardComponent :CustomClass="'flex flex-col gap-5 relative h-[450px]'">
+      <CardComponent
+        :CustomClass="'flex flex-col gap-5 relative w-[500px] h-[450px] shadow-2xl hover:shadow-4xl'"
+      >
         <div class="h-[20%] absolute flex justify-center items-center">
           <div
             @click="router.replace('/')"
@@ -134,6 +139,7 @@ const onLogin = () => {
         </form>
       </CardComponent>
     </div>
+    <AllRightsReservedComponent :ColorMode="COLOR_MODE.Light"></AllRightsReservedComponent>
   </div>
 </template>
 
